@@ -12,11 +12,11 @@ describe Node do
     end
 
 
-    xdescribe "#data" do
+    describe "#data" do
         it "can print the data inside of the node" do 
             node1 = Node.new("plop")
 
-            expect(node.data).to eq("plop") 
+            expect(node1.data).to eq("plop") 
         end
     end
 
