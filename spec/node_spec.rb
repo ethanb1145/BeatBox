@@ -20,12 +20,11 @@ describe Node do
         end
     end
 
-    xdescribe "next_node" do 
+    describe "next_node" do 
         it "can move us to the nil node" do 
             node1 = Node.new("plop")
-            node2 = Node.new("pah")
 
-            expect(node.next_node).to be(nil)
+            expect(node1.next_node).to be(nil)
         end
     end
 end
