@@ -12,5 +12,13 @@ describe LinkedList do
         end
     end
 
+    describe "#head" do
+        it "exists" do 
+            list = LinkedList.new
+
+            expect(list.head).to be(nil)
+        end
+    end
+
 
 end
