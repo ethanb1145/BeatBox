@@ -12,11 +12,21 @@ describe LinkedList do
         end
     end
 
+
     describe "#head" do
         it "exists" do 
             list = LinkedList.new
 
             expect(list.head).to be(nil)
+        end
+    end
+
+    
+    describe "#append" do
+        it "adds to the list" do 
+            list = LinkedList.new
+
+            expect(list.append).to be("doop")
         end
     end
 
