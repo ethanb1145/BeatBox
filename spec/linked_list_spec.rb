@@ -50,8 +50,8 @@ describe LinkedList do
 
             expect(list).to eq(list)
         end
-
     end
+
 
     describe "#head.next_node" do
         it "if head is the only data, it can output the next nil node" do
@@ -59,6 +59,15 @@ describe LinkedList do
             list.append("doop")
 
             expect(list.head.next_node).to be(nil)
+        end
+    end
+
+
+    describe "#is_empty?" do 
+        it "checks if list is empty, can print true/false" do
+            list = LinkedList.new
+
+            expect(list.is_empty?).to be(true)
         end
     end
 end

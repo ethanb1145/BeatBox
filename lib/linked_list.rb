@@ -7,9 +7,15 @@ class LinkedList
         @head = nil
     end
 
-    # def head
-    #     @head = nil
-    # end
+
+    def is_empty?
+        if @head == nil 
+            true
+        else 
+            false
+        end
+    end
+
 
     def append(data)
         if @head
@@ -20,6 +26,7 @@ class LinkedList
         end
 
     end
+
 
     def tail
         node = @head
@@ -32,9 +39,12 @@ class LinkedList
 
 end
 
-list = LinkedList.new
-list.head
-list.append(10)
-p list
-list.append(20)
-p list
+# list = LinkedList.new
+# list.append("doop")
+# list.append("toop")
+# p list
+# # p list.head
+# # p list.tail
+# # # p list
+# # # list.append(20)
+# # # p list
