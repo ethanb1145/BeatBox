@@ -22,13 +22,14 @@ describe LinkedList do
     end
 
 
-    describe "#tail" do
-        it "exists" do
-            list = LinkedList.new
-            list.append(10)
-            list.tail
 
-            expect(list.tail).to eq(10)
+
+    describe "#head" do
+        it "can accept first data as the head" do
+            list = LinkedList.new
+            list.append("doop")
+
+            expect(list.head.data).to eq("doop")
         end
     end
 
