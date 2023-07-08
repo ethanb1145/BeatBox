@@ -84,7 +84,19 @@ class LinkedList
         end
     end
 
-    
+
+    def insert(index, data)
+        node = Node.new(data)
+        if index == 0
+            node.next_node = @head
+            @head = node
+        else
+            current_head = @head
+            (index - 1).times {current_head = current.next_node}
+            node.next_node = current_head.next_node
+            current_head.next_node = node
+        end
+    end
 end
 
 
@@ -95,7 +107,9 @@ end
 # list = LinkedList.new
 # list.append("doop")
 # list.append("toop")
-# list
+# list.insert(0, "soop")
+# p list.to_string
+# # list
 # p list.head
 # p list.head.next_node
 # p list.tail.next_node
@@ -106,3 +120,4 @@ end
 # # # # # p list
 # # # # # list.append(20)
 # # # # # p list
+
