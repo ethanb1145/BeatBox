@@ -103,4 +103,25 @@ describe LinkedList do
             expect(list.to_string).to eq("doop toop")
         end
     end
+
+
+    describe "append" do 
+        it "can add data to end of linked list" do 
+            list = LinkedList.new
+            list.append("doop")
+            
+            expect(list.to_string).to eq("doop")
+        end
+    end
+
+
+    describe "prepend" do 
+        it "can add data to start of linked list" do 
+            list = LinkedList.new
+            list.append("doop")
+            list.prepend("toop")
+            
+            expect(list.to_string).to eq("toop doop")
+        end
+    end
 end
