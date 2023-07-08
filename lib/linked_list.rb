@@ -71,8 +71,20 @@ class LinkedList
             string.strip
 
         end
-
     end
+
+
+    def prepend(data) 
+        if is_empty? == true
+            @head = Node.new(data)
+        else 
+            current_head = Node.new(data)
+            current_head.next_node = @head
+            @head = current_head
+        end
+    end
+
+    
 end
 
 
