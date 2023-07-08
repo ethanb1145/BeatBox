@@ -1,7 +1,9 @@
 require "./lib/node"
 
+
 class LinkedList
     attr_accessor :head, :data, :next_node
+
 
     def initialize
         @head = nil
@@ -54,7 +56,29 @@ class LinkedList
     end
 
 
+    def to_string   # Code Help channel reference 
+        if @head == nil
+            nil
+        else 
+            current_node = @head
+
+            until current_node.next_node == nil do
+                string = "#{string} #{current_node.data}"
+                current_node = current_node.next_node
+            end
+
+            string = "#{string} #{current_node.data}"
+            string.strip
+
+        end
+
+    end
 end
+
+
+
+# TEST COMMANDS 
+# =========================
 
 # list = LinkedList.new
 # list.append("doop")
@@ -64,8 +88,9 @@ end
 # p list.head.next_node
 # p list.tail.next_node
 # p list.length
-# # # p list.head
-# # # p list.tail
-# # # # p list
-# # # # list.append(20)
-# # # # p list
+# p list.to_string
+# # # # p list.head
+# # # # p list.tail
+# # # # # p list
+# # # # # list.append(20)
+# # # # # p list

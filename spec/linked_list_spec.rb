@@ -92,4 +92,15 @@ describe LinkedList do
             expect(list.length).to eq(2)
         end
     end
+
+
+    describe "to_string" do 
+        it "can print the linked list as a whole string" do 
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+            
+            expect(list.to_string).to eq("doop toop")
+        end
+    end
 end

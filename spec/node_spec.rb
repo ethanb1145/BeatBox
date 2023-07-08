@@ -20,8 +20,9 @@ describe Node do
         end
     end
 
+    
     describe "next_node" do 
-        it "can move us to the nil node" do 
+        it "can show us the next nil node" do 
             node1 = Node.new("plop")
 
             expect(node1.next_node).to be(nil)
