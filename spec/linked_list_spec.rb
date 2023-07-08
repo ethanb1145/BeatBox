@@ -14,7 +14,7 @@ describe LinkedList do
 
 
     describe "#head" do
-        it "exists" do 
+        it "makes empty data/nil into the head of the linked list" do 
             list = LinkedList.new
 
             expect(list.head).to be(nil)
