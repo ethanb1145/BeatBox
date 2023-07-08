@@ -33,5 +33,15 @@ describe LinkedList do
         end
     end
 
+    describe "#tail" do
+        it "can accept last data as the tail" do
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+
+            expect(list.tail.data).to eq("toop")
+        end
+    end
+
 
 end
