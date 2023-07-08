@@ -124,4 +124,16 @@ describe LinkedList do
             expect(list.to_string).to eq("toop doop")
         end
     end
+
+
+    describe "insert" do 
+        it "can add data to an index in the linked list" do 
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+            list.insert(1, "soop")
+            
+            expect(list.to_string).to eq("doop soop toop")
+        end
+    end
 end
