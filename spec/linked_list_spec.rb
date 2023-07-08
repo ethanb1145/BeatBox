@@ -81,4 +81,15 @@ describe LinkedList do
             expect(list.is_empty?).to be(true)
         end
     end
+
+
+    describe "#length" do
+        it "it can output the length of the linked list" do
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+
+            expect(list.length).to eq(2)
+        end
+    end
 end
