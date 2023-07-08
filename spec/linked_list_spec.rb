@@ -22,8 +22,6 @@ describe LinkedList do
     end
 
 
-
-
     describe "#head" do
         it "can accept first data as the head" do
             list = LinkedList.new
@@ -32,6 +30,7 @@ describe LinkedList do
             expect(list.head.data).to eq("doop")
         end
     end
+
 
     describe "#tail" do
         it "can accept last data as the tail" do
@@ -45,3 +44,14 @@ describe LinkedList do
 
 
 end
+
+
+    describe "#list" do 
+        it "can list all data in the linked list" do 
+            list = LinkedList.new
+            list.append("doop")
+
+            expect(list).to eq(list)
+        end
+
+    end
