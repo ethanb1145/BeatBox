@@ -43,9 +43,6 @@ describe LinkedList do
     end
 
 
-end
-
-
     describe "#list" do 
         it "can list all data in the linked list" do 
             list = LinkedList.new
@@ -55,3 +52,13 @@ end
         end
 
     end
+
+    describe "#head.next_node" do
+        it "if head is the only data, it can output the next nil node" do
+            list = LinkedList.new
+            list.append("doop")
+
+            expect(list.head.next_node).to be(nil)
+        end
+    end
+end
