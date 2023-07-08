@@ -63,6 +63,17 @@ describe LinkedList do
     end
 
 
+    describe "#tail.next_node" do
+        it "it can output the next nil node" do
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+
+            expect(list.tail.next_node).to be(nil)
+        end
+    end
+
+
     describe "#is_empty?" do 
         it "checks if list is empty, can print true/false" do
             list = LinkedList.new
