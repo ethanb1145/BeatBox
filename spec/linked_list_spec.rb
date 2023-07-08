@@ -21,12 +21,14 @@ describe LinkedList do
         end
     end
 
-    
-    describe "#append" do
-        it "adds to the list" do 
-            list = LinkedList.new
 
-            expect(list.append).to be("doop")
+    describe "#tail" do
+        it "exists" do
+            list = LinkedList.new
+            list.append(10)
+            list.tail
+
+            expect(list.tail).to eq(10)
         end
     end
 
