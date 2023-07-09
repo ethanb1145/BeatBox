@@ -75,7 +75,7 @@ class LinkedList
 
 
     def prepend(data) 
-        if is_empty? == true
+        if is_empty? == true            # head.nil?
             @head = Node.new(data)
         else 
             current_head = Node.new(data)
@@ -97,6 +97,39 @@ class LinkedList
             current_head.next_node = node
         end
     end
+
+    # def find(start_index, count)          # my initial find method, is a dud, returns nil at end 
+    #     current_node = @head
+    #     index = 0
+
+    #     while current_node != nil
+    #         if index >= start_index && index < start_index + count
+    #             puts current_node.data
+    #         end
+    #         index += 1
+    #         current_node = current_node.next_node
+    #     end
+    # end
+
+    def find(start_position, num_elements)
+        return [] if start_position < 0 || num_elements <= 0 || @head.nil?
+      
+        result = []
+        current = @head
+        count = 0
+      
+        while current && count < start_position + num_elements
+          result << current.data if count >= start_position
+          current = current.next_node
+          count += 1
+        end
+      
+        result
+      end
+    end
+
+
+    
 end
 
 
@@ -107,7 +140,11 @@ end
 # list = LinkedList.new
 # list.append("doop")
 # list.append("toop")
-# list.insert(0, "soop")
+# list.append("aoop")
+# list.append("roop")
+# list.append("zoop")
+# list
+# p list.find(1,3)
 # p list.to_string
 # # list
 # p list.head

@@ -136,4 +136,19 @@ describe LinkedList do
             expect(list.to_string).to eq("doop soop toop")
         end
     end
+
+
+    describe "find" do 
+        it "accepts two parameters, first is position to return, second specifies how many elements to return after index " do 
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+            list.append("soop")
+            list.append("bop")
+            list.append("zoop")
+            list.append("tzum")
+            
+            expect(list.find(1,2)).to eq(["toop"],["soop"],["bop"])
+        end
+    end
 end
