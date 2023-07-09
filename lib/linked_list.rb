@@ -98,18 +98,6 @@ class LinkedList
         end
     end
 
-    # def find(start_index, count)          # my initial find method, is a dud, returns nil at end 
-    #     current_node = @head
-    #     index = 0
-
-    #     while current_node != nil
-    #         if index >= start_index && index < start_index + count
-    #             puts current_node.data
-    #         end
-    #         index += 1
-    #         current_node = current_node.next_node
-    #     end
-    # end
 
     def find(start_position, num_elements)
         return [] if start_position < 0 || num_elements <= 0 || @head.nil?
@@ -125,13 +113,22 @@ class LinkedList
         end
       
         result
-      end
     end
 
 
-    
+    def includes?(value)
+        return false if @head.nil?
+      
+        current = @head
+      
+        while current
+          return true if current.data == value
+          current = current.next_node
+        end
+      
+        false
+    end
 end
-
 
 
 # TEST COMMANDS 

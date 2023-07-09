@@ -148,7 +148,24 @@ describe LinkedList do
             list.append("zoop")
             list.append("tzum")
             
-            expect(list.find(1,2)).to eq(["toop"],["soop"],["bop"])
+            expect(list.find(1,2)).to eq(["toop", "soop"])
         end
     end
+
+
+    describe "includes?" do
+        it "can give a true/false if linked list includes a given data" do
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+            list.append("soop")
+            list.append("bop")
+            list.append("zoop")
+            list.append("tzum")
+
+            expect(list.includes?("soop")).to be(true)
+        end
+    end
+
+
 end
