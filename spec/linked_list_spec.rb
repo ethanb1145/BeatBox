@@ -83,13 +83,13 @@ describe LinkedList do
     end
 
 
-    describe "#length" do
+    describe "#count" do
         it "it can output the length of the linked list" do
             list = LinkedList.new
             list.append("doop")
             list.append("toop")
 
-            expect(list.length).to eq(2)
+            expect(list.count).to eq(2)
         end
     end
 

@@ -41,7 +41,7 @@ class LinkedList
     end
 
 
-    def length              # checks length of data in linked list
+    def count              # checks length of data in linked list
         if is_empty? == true
             count = 0
         else 
@@ -139,7 +139,7 @@ class LinkedList
         current_node.data = nil
     end
 
-    
+
 end
 
 
