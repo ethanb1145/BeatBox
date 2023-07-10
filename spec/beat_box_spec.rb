@@ -23,6 +23,35 @@ describe BeatBox do
     end
 
 
+    describe "#head" do
+        it "prints the head data in the list" do 
+            bb = BeatBox.new
+
+            expect(bb.list.head).to be(nil)
+        end
+    end
+
+
+    describe "#append" do
+        it "adds to the beat box list" do 
+            bb = BeatBox.new
+            bb.append("deep doo ditt")
+
+            expect(bb.list).to eq("deep doo ditt")
+        end
+    end
+
+
+    describe "#head" do
+        it "prints the head data in the list out of multiple data" do 
+            bb = BeatBox.new
+            bb.append("deep doo ditt")
+
+            expect(bb.list.head.data).to eq("deep")
+        end
+    end
+
+
 
 
 
