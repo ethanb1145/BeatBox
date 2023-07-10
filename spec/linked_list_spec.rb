@@ -168,4 +168,20 @@ describe LinkedList do
     end
 
 
+    describe "pop" do
+        it "can remove last element of linked list" do
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+            list.append("soop")
+            list.append("bop")
+            list.append("zoop")
+            list.append("tzum")
+            list.pop
+
+            expect(list.to_string).to eq("doop toop soop bop zoop")
+        end
+    end
+
+
 end
