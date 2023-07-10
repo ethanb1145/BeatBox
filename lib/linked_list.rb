@@ -8,6 +8,7 @@ class LinkedList
     def initialize
         @head = nil         # empty by default
         @next_node = nil    # empty by default 
+        @data = data
     end
 
 
@@ -128,7 +129,19 @@ class LinkedList
       
         false
     end
+
+
+    def pop
+        current_node = @head
+        until current_node.next_node == nil
+            current_node = current_node.next_node
+        end
+        current_node.data = nil
+    end
+
+    
 end
+
 
 
 # TEST COMMANDS 
