@@ -75,41 +75,41 @@ class LinkedList
     end
 
 
-    def prepend(data) 
-        if is_empty? == true            # head.nil?
+    def prepend(data)           # adds given data to start of linked list
+        if is_empty? == true            # head.nil? adds data to first index
             @head = Node.new(data)
         else 
-            current_head = Node.new(data)
-            current_head.next_node = @head
-            @head = current_head
+            current_head = Node.new(data)       # variable accepts new data
+            current_head.next_node = @head      # places it before previous head
+            @head = current_head                # makes new data the new head
         end
     end
 
 
-    def insert(index, data)
+    def insert(index, data)     # adds data and given index
         node = Node.new(data)
-        if index == 0
-            node.next_node = @head
-            @head = node
+        if index == 0           # if given index is 0, inserts new data 
+            node.next_node = @head      # places data before head
+            @head = node                # replaces old head 
         else
-            current_head = @head
-            (index - 1).times {current_head = current.next_node}
-            node.next_node = current_head.next_node
+            current_head = @head        # else, head stays the same 
+            (index - 1).times {current_head = current.next_node}        # .times method iterates through to find position
+            node.next_node = current_head.next_node             # updates surrounding nodes 
             current_head.next_node = node
         end
     end
 
 
-    def find(start_position, num_elements)
-        return [] if start_position < 0 || num_elements <= 0 || @head.nil?
+    def find(start_position, num_elements)      # prints data at given index and the given amount of elements after
+        return [] if start_position < 0 || num_elements <= 0 || @head.nil?      # can't run if empty
       
-        result = []
-        current = @head
+        result = []                 # empty array to store results
+        current = @head             # start position
         count = 0
       
-        while current && count < start_position + num_elements
-          result << current.data if count >= start_position
-          current = current.next_node
+        while current && count < start_position + num_elements          # checks for range of input
+          result << current.data if count >= start_position             # result takes in data 
+          current = current.next_node                                   
           count += 1
         end
       
@@ -117,38 +117,38 @@ class LinkedList
     end
 
 
-    def includes?(value)
-        return false if @head.nil?
+    def includes?(value)                # checks if linked list includes a given value
+        return false if @head.nil?      
       
-        current = @head
+        current = @head                 # starts at head
       
         while current
-          return true if current.data == value
-          current = current.next_node
+          return true if current.data == value          # iterates for the given value
+          current = current.next_node                   
         end
       
-        false
+        false                           # returns false if value is not in linked list
     end
 
 
-    def pop
-        if @head.next_node.nil?
+    def pop                             # removes last element from linked list
+        if @head.next_node.nil?         # removes head if it's the only data
             popped_node = @head
             @head = nil
             popped_node
         end
 
-        current_node = @head
-        until current_node.next_node.next_node.nil?
+        current_node = @head            # starts at head
+        until current_node.next_node.next_node.nil?         # stops when the last node has nil as its next node
             current_node = current_node.next_node
         end
 
-        popped_node = current_node.next_node
-        current_node.next_node = nil
+        popped_node = current_node.next_node                # removes last node
+        current_node.next_node = nil                        # turns last node into nil
         popped_node
     end
 
-    
+
 end
 
 
