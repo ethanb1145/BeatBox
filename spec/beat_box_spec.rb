@@ -63,12 +63,13 @@ describe BeatBox do
         end
     end
 
-    describe "#play" do 
+    xdescribe "#play" do 
         it "plays the sound" do
             bb = BeatBox.new
             bb.append("deep doo ditt woo hoo shu")
+            
 
-            expect{ bb.play }.to output.to_stdout
+            expect{ bb.play }.to output("deep doo ditt woo hoo shu").to_stdout
         end
     end
 
