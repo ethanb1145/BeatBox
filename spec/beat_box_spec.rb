@@ -38,7 +38,8 @@ describe BeatBox do
             bb = BeatBox.new
             bb.append("deep doo ditt")
 
-            expect(bb.list).to eq("deep doo ditt")
+            expect(bb.list.head.data).to eq("deep")
+            expect(bb.list.head.next_node.data).to eq("doo")
         end
     end
 
@@ -58,7 +59,7 @@ describe BeatBox do
             bb = BeatBox.new
             bb.append("zuu shii zhuu")
 
-            expect(bb.count).to be(1)
+            expect(bb.count).to be(3)
         end
     end
 

@@ -9,7 +9,7 @@ class BeatBox
 
 
     def append(data)
-        @list.append(data)
+        data.split.each {|element| @list.append(element)}
     end
 
 

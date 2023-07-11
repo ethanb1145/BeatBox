@@ -30,7 +30,7 @@ class LinkedList
         end
 
     end
-    
+
 
     def tail               # tail is end of the linked list
         node = @head
