@@ -18,21 +18,13 @@ describe BeatBox do
         it "prints out empty data in the list" do 
             bb = BeatBox.new
 
-            expect(bb.list).to be(nil)
+            expect(bb.list.head).to be(nil)
         end
     end
 
 
-    xdescribe "#list" do
-        it "prints out data in the list" do 
-            bb = BeatBox.new
 
-            expect(bb.list).to eq("")
-        end
-    end
-
-
-    xdescribe "#head" do
+    describe "#head" do
         it "prints the head data in the list" do 
             bb = BeatBox.new
 
@@ -41,7 +33,7 @@ describe BeatBox do
     end
 
 
-    xdescribe "#append" do
+    describe "#append" do
         it "adds to the beat box list" do 
             bb = BeatBox.new
             bb.append("deep doo ditt")
@@ -51,7 +43,7 @@ describe BeatBox do
     end
 
 
-    xdescribe "#head" do
+    describe "#head" do
         it "prints the head data in the list out of multiple data" do 
             bb = BeatBox.new
             bb.append("deep doo ditt")
@@ -61,7 +53,7 @@ describe BeatBox do
     end
 
 
-    xdescribe "#count" do
+    describe "#count" do
         it "counts elements as one in linked array" do 
             bb = BeatBox.new
             bb.append("zuu shii zhuu")
