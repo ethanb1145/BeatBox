@@ -2,10 +2,25 @@ require_relative 'linked_list'
 
 
 class BeatBox
-    attr_reader :linked_list
+    attr_accessor :linked_list, :head
 
     def initialize
         @linked_list = LinkedList.new
+        @head = nil
+    end
+
+
+    def list
+        puts @linked_list
+    end
+
+
+    def head
+        if @linked_list.head.nil?
+            nil
+        else 
+            puts {list.head.data}
+        end
     end
 
 
@@ -18,7 +33,7 @@ class BeatBox
         @linked_list.count
     end
 
-    
+
 
 
 end

@@ -14,11 +14,20 @@ describe BeatBox do
     end
 
 
-    xdescribe "#list" do
+    describe "#list" do
         it "prints out empty data in the list" do 
             bb = BeatBox.new
 
             expect(bb.list).to be(nil)
+        end
+    end
+
+
+    xdescribe "#list" do
+        it "prints out data in the list" do 
+            bb = BeatBox.new
+
+            expect(bb.list).to eq("")
         end
     end
 
@@ -60,6 +69,8 @@ describe BeatBox do
             expect(bb.count).to be(1)
         end
     end
+
+
 
 
 
