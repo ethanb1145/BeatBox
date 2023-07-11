@@ -3,7 +3,7 @@ require_relative 'linked_list'
 class BeatBox
     attr_accessor :list
 
-    
+
     def initialize
         @list = LinkedList.new
     end
@@ -25,5 +25,4 @@ class BeatBox
         system(command)
 
     end
-
 end

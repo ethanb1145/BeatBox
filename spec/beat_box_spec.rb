@@ -25,7 +25,7 @@ describe BeatBox do
 
 
     describe "#head" do
-        it "prints the head data in the list" do 
+        it "prints the emptyhead data in the list" do 
             bb = BeatBox.new
 
             expect(bb.list.head).to be(nil)
