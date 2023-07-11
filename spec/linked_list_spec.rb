@@ -83,13 +83,13 @@ describe LinkedList do
     end
 
 
-    describe "#length" do
+    describe "#count" do
         it "it can output the length of the linked list" do
             list = LinkedList.new
             list.append("doop")
             list.append("toop")
 
-            expect(list.length).to eq(2)
+            expect(list.count).to eq(2)
         end
     end
 
@@ -103,4 +103,85 @@ describe LinkedList do
             expect(list.to_string).to eq("doop toop")
         end
     end
+
+
+    describe "append" do 
+        it "can add data to end of linked list" do 
+            list = LinkedList.new
+            list.append("doop")
+            
+            expect(list.to_string).to eq("doop")
+        end
+    end
+
+
+    describe "prepend" do 
+        it "can add data to start of linked list" do 
+            list = LinkedList.new
+            list.append("doop")
+            list.prepend("toop")
+            
+            expect(list.to_string).to eq("toop doop")
+        end
+    end
+
+
+    describe "insert" do 
+        it "can add data to an index in the linked list" do 
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+            list.insert(1, "soop")
+            
+            expect(list.to_string).to eq("doop soop toop")
+        end
+    end
+
+
+    describe "find" do 
+        it "accepts two parameters, first is position to return, second specifies how many elements to return after index " do 
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+            list.append("soop")
+            list.append("bop")
+            list.append("zoop")
+            list.append("tzum")
+            
+            expect(list.find(1,2)).to eq(["toop", "soop"])
+        end
+    end
+
+
+    describe "includes?" do
+        it "can give a true/false if linked list includes a given data" do
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+            list.append("soop")
+            list.append("bop")
+            list.append("zoop")
+            list.append("tzum")
+
+            expect(list.includes?("soop")).to be(true)
+        end
+    end
+
+
+    describe "pop" do
+        it "can remove last element of linked list" do
+            list = LinkedList.new
+            list.append("doop")
+            list.append("toop")
+            list.append("soop")
+            list.append("bop")
+            list.append("zoop")
+            list.append("tzum")
+            list.pop
+
+            expect(list.to_string).to eq("doop toop soop bop zoop")
+        end
+    end
+
+
 end
