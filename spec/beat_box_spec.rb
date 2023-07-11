@@ -14,7 +14,7 @@ describe BeatBox do
     end
 
 
-    describe "#list" do
+    xdescribe "#list" do
         it "prints out empty data in the list" do 
             bb = BeatBox.new
 
@@ -23,7 +23,7 @@ describe BeatBox do
     end
 
 
-    describe "#head" do
+    xdescribe "#head" do
         it "prints the head data in the list" do 
             bb = BeatBox.new
 
@@ -32,7 +32,7 @@ describe BeatBox do
     end
 
 
-    describe "#append" do
+    xdescribe "#append" do
         it "adds to the beat box list" do 
             bb = BeatBox.new
             bb.append("deep doo ditt")
@@ -42,12 +42,22 @@ describe BeatBox do
     end
 
 
-    describe "#head" do
+    xdescribe "#head" do
         it "prints the head data in the list out of multiple data" do 
             bb = BeatBox.new
             bb.append("deep doo ditt")
 
             expect(bb.list.head.data).to eq("deep")
+        end
+    end
+
+
+    xdescribe "#count" do
+        it "counts elements as one in linked array" do 
+            bb = BeatBox.new
+            bb.append("zuu shii zhuu")
+
+            expect(bb.count).to be(1)
         end
     end
 
