@@ -7,7 +7,7 @@ class LinkedList
 
     def initialize
         @head = nil         # empty by default
-        @next_node = nil    # empty by default 
+        @next_node = nil    # empty by default
         @data = data
     end
 
@@ -29,6 +29,11 @@ class LinkedList
 
         end
 
+    end
+
+
+    def head
+        @head
     end
 
 

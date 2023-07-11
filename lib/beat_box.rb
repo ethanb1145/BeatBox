@@ -1,36 +1,26 @@
 require_relative 'linked_list'
 
-
 class BeatBox
-    attr_accessor :linked_list, :head
+    attr_accessor :list, :head, :next_node, :list_head
 
     def initialize
-        @linked_list = LinkedList.new
-        @head = nil
+        @list = LinkedList.new
+        @list_head = @list.head
+        @next_node = @list.next_node
     end
-
-
-    def list
-        puts @linked_list
-    end
-
 
     def head
-        if @linked_list.head.nil?
-            nil
-        else 
-            puts {list.head.data}
-        end
+        @head = @list_head
     end
 
 
     def append(data)
-        @linked_list.append(data)
+        @list.append(data)
     end
 
 
     def count
-        @linked_list.count
+        @list.count
     end
 
 
