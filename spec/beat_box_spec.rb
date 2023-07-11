@@ -57,16 +57,19 @@ describe BeatBox do
     describe "#count" do
         it "counts elements as one in linked array" do 
             bb = BeatBox.new
-            bb.append("zuu shii zhuu")
+            bb.append("deep doo ditt")
 
             expect(bb.count).to be(3)
         end
     end
 
+    describe "#play" do 
+        it "plays the sound" do
+            bb = BeatBox.new
+            bb.append("deep doo ditt woo hoo shu")
 
-
-
-
-
+            expect(bb.play).to output(/deep doo ditt woo hoo shu/).to_stdout
+        end
+    end
 
 end
