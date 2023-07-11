@@ -182,6 +182,4 @@ describe LinkedList do
             expect(list.to_string).to eq("doop toop soop bop zoop")
         end
     end
-
-
 end
